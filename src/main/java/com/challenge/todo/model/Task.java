@@ -1,6 +1,7 @@
 package com.challenge.todo.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tasks")
@@ -10,10 +11,12 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String name;
 
     private String description;
 
+    @NotBlank
     private Boolean done;
 
     private Integer priority;
