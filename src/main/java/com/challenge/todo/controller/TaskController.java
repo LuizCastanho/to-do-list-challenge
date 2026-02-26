@@ -1,5 +1,6 @@
 package com.challenge.todo.controller;
 
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import com.challenge.todo.model.Task;
@@ -17,7 +18,7 @@ public class TaskController {
     }
 
     @PostMapping
-    public Task create(@Valid @RequestBody Task task) {        
+    public Task create(@Valid @RequestBody @NonNull Task task) {        
         return repository.save(task);
     }
 
