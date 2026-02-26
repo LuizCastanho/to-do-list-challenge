@@ -16,7 +16,6 @@ public class Task {
 
     private String description;
 
-    @NotBlank
     private Boolean done;
 
     private Integer priority;
@@ -35,7 +34,7 @@ public class Task {
         return name;
     }
 
-    public void setNome(String name) {
+    public void setName(String name) {
         this.name = name;
     }
     
